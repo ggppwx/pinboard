@@ -1,0 +1,25 @@
+{
+    "name": "Pin",
+    "version": "1.0",
+    "description": "pinboard clip",
+    "permissions": [
+        "storage"
+    ],
+    "background" : {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_action" : {
+        "default_popup" : "popup.html"
+    },
+    "web_accessible_resources" : [
+        "sidebar.html"
+    ],
+    "manifest_version": 2
+}
